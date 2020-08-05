@@ -4,7 +4,7 @@ import tensorflow.keras as keras
 import ctypes
 
 # Load Model
-model = keras.models.load_model('..\\Models\\CODV4.h5')
+model = keras.models.load_model('..\\Models\\CODV7.h5')
 
 # Find Center Of Screen
 user32 = ctypes.windll.user32
@@ -27,6 +27,3 @@ while 1 == 1:
         print('Enemy!')
     else:
         print('')
-
-
-

@@ -9,7 +9,7 @@ import uuid
 # Find Center Of Screen
 user32 = ctypes.windll.user32
 screenSize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
-centerPoint = tuple(i/2 for i in screenSize)
+centerPoint = tuple(i / 2 for i in screenSize)
 print('Screen Size X:%d y:%d' % screenSize)
 print('Targeting Center X:%d y:%d' % centerPoint)
 
@@ -20,7 +20,8 @@ if screenSize[0] == 3840:
 elif screenSize[0] == 1920:
     fourKMultiplier = 1
 else:
-    raise Exception('Invalid Screen Resolution', 'Set up your screen resolution')
+    raise Exception('Invalid Screen Resolution',
+                    'Set up your screen resolution')
 
 
 lastSecondTimestamp = datetime.utcnow() + timedelta(seconds=1)
@@ -41,7 +42,8 @@ while True:
 
     # Grab Screen
     image = pyautogui.screenshot(region=(centerPoint[0] - (100 * fourKMultiplier),
-                                         centerPoint[1] - (100 * fourKMultiplier),
+                                         centerPoint[1] -
+                                         (100 * fourKMultiplier),
                                          (200 * fourKMultiplier), (200 * fourKMultiplier)))
     if image.size != (200, 200):
         image = image.resize((200, 200), 0)
@@ -75,9 +77,8 @@ while True:
         targetFolder = '\\10-19\\'
 
     if targetFolder is not None:
-        baseDirectory = 'G:\\Projects\\COD Target Trainer\\Data Collection'
+        baseDirectory = 'C:\\Users\\bryce\\Desktop\\COD\\EnemyDetector\\Data\\Self Collection'
         generatedGUID = str(uuid.uuid1())
-        image.save(baseDirectory + targetFolder + generatedGUID + '.png', 'png')
+        image.save(baseDirectory + targetFolder +
+                   generatedGUID + '.png', 'png')
         print('Writing %' + str((prediction[0][0] * 100)))
-
-
