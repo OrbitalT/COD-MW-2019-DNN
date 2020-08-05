@@ -1,7 +1,7 @@
 import os
 import zipfile
 
-base_dir = 'C:\\Users\\bryce\\Desktop\\COD\\EnemyDetector\\Data'
+base_dir = 'C:PATH\\TO\\COD-MW-2019-DNN-master\\EnemyDetector\\Data'
 train_dir = os.path.join(base_dir, 'train')
 validation_dir = os.path.join(base_dir, 'validation')
 
@@ -144,4 +144,4 @@ history = model.fit_generator(
       validation_steps=50,  # 1000 images = batch_size * steps
       verbose=1)
 
-model.save('C:\\Users\\bryce\\Desktop\\COD\\EnemyDetector\\Models\\CODV7.h5')
+model.save('C:PATH\\TO\\COD-MW-2019-DNN-master\\EnemyDetector\\Models\\CODV1.h5')

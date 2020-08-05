@@ -28,7 +28,7 @@ lastSecondTimestamp = datetime.utcnow() + timedelta(seconds=1)
 tickCounter = 0
 
 # Load Model
-model = keras.models.load_model('..\\Models\\CODV7.h5')
+model = keras.models.load_model('..\\Models\\CODV1.h5')
 
 # Starting Main Loop (will run faster if using Tensorflow + GPU)
 print('Started Inner Loop')
@@ -77,7 +77,7 @@ while True:
         targetFolder = '\\10-19\\'
 
     if targetFolder is not None:
-        baseDirectory = 'C:\\Users\\bryce\\Desktop\\COD\\EnemyDetector\\Data\\Self Collection'
+        baseDirectory = 'C:PATH\\TO\\COD-MW-2019-DNN-master\\EnemyDetector\\Data\\Self Collection'
         generatedGUID = str(uuid.uuid1())
         image.save(baseDirectory + targetFolder +
                    generatedGUID + '.png', 'png')

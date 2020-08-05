@@ -8,7 +8,7 @@ from datetime import timedelta
 from PIL import Image, ImageTk
 
 # Load Model
-model = keras.models.load_model('..\\Models\\CODV7.h5')
+model = keras.models.load_model('..\\Models\\CODV1.h5')
 
 # Find Center Of Screen
 user32 = ctypes.windll.user32
